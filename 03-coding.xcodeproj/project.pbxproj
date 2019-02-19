@@ -13,6 +13,7 @@
 		F340C989221C3FB200790B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F340C987221C3FB200790B8C /* Main.storyboard */; };
 		F340C98B221C3FC000790B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F340C98A221C3FC000790B8C /* Assets.xcassets */; };
 		F340C98E221C3FC000790B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F340C98C221C3FC000790B8C /* LaunchScreen.storyboard */; };
+		F340C996221C455E00790B8C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340C995221C455E00790B8C /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F340C98A221C3FC000790B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F340C98D221C3FC000790B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F340C98F221C3FC000790B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F340C995221C455E00790B8C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				F340C981221C3FB100790B8C /* AppDelegate.swift */,
-				F340C983221C3FB100790B8C /* FirstViewController.swift */,
-				F340C985221C3FB100790B8C /* SecondViewController.swift */,
+				F340C997221C458100790B8C /* Controller */,
 				F340C987221C3FB200790B8C /* Main.storyboard */,
 				F340C98A221C3FC000790B8C /* Assets.xcassets */,
 				F340C98C221C3FC000790B8C /* LaunchScreen.storyboard */,
 				F340C98F221C3FC000790B8C /* Info.plist */,
 			);
 			path = "03-coding";
+			sourceTree = "<group>";
+		};
+		F340C997221C458100790B8C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F340C983221C3FB100790B8C /* FirstViewController.swift */,
+				F340C985221C3FB100790B8C /* SecondViewController.swift */,
+				F340C995221C455E00790B8C /* ThirdViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				F340C986221C3FB100790B8C /* SecondViewController.swift in Sources */,
 				F340C982221C3FB100790B8C /* AppDelegate.swift in Sources */,
+				F340C996221C455E00790B8C /* ThirdViewController.swift in Sources */,
 				F340C984221C3FB100790B8C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +304,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gacitua.-3-coding";
+				PRODUCT_BUNDLE_IDENTIFIER = gacitua.coding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +321,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gacitua.-3-coding";
+				PRODUCT_BUNDLE_IDENTIFIER = gacitua.coding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
