@@ -10,11 +10,30 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    
+    var fibonacci : [Int] = [0,1]
+    var fibId = 1
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        fibId = 80
+        generateFibNumbers()
     }
 
-
+    func generateFibNumbers() {
+        if (fibId <= 1 || fibId >= 100){
+            return
+        }
+        //Generar numeros de fib. hasta el fibId
+        for i in 2...fibId{
+            print(i)
+            fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
+            print(fibonacci[i])
+        }
+        print(fibonacci)
+    }
 }
 
