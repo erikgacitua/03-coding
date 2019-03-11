@@ -10,30 +10,49 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var labelNumber: UILabel!
+    @IBOutlet weak var textviewResult: UITextView!
+    @IBOutlet weak var stepper: UIStepper!
+    
     
     var fibonacci : [Int] = [0,1]
     var fibId = 1
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        fibId = 80
-        generateFibNumbers()
+       
+        updateLabel(id: Int(self.stepper.value))
+    
     }
 
     func generateFibNumbers() {
-        if (fibId <= 1 || fibId >= 100){
+        /*if (fibId <= 1 || fibId >= 100){
             return
-        }
+        }*/
         //Generar numeros de fib. hasta el fibId
         for i in 2...fibId{
-            print(i)
             fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
-            print(fibonacci[i])
         }
-        print(fibonacci)
+        let fibStr : [String] = fibonacci.compactMap({ String($0)})
+            let result : String = fibStr.joined(separator: "\n")
+            self.textviewResult.text = result
+        }
+    
+    
+    //Acción del botón + y -
+    @IBAction func steperPressed(_ sender: UIStepper) {
+        
+        updateLabel(id: Int(sender.value))
+        
     }
-}
+    
+    func updateLabel(id: Int){
+        
+        self.fibId = id
+        self.labelNumber.text = "\(self.fibId)"
+        generateFibNumbers()
+    }
 
+
+}
